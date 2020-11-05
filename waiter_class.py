@@ -10,11 +10,28 @@ class Waiter(Menu):
     def ordering(self):
         # Create an empty order list
         order_list = []
-        ordering = True
+
         # loop to get the tables orders
-        while ordering:
+        while True:
             # get the customers order
-            cus_item = input("Please enter what you want.\n=>")
+            cust_item = input("Please enter what you want.\n=>")
 
             # check if the order is on the menu
-            if cus_item in self.menu.keys()
+            if cust_item in self.menu.keys():
+                order_list.append(cust_item) # If on the menu
+            else:
+                print("We dont have that item on the menu")
+
+            # ask if the customer wants anything else
+            more = input("Anything else? ")
+            if more[0].lower() == "n":
+                break
+
+        return order_list
+
+    def total_price(self, order_list):
+        # work out the total price of what they ordered
+        price = 0 # place holder for price
+        for item in order_list:
+            price += self.menu[item]
+        return price

@@ -16,8 +16,18 @@ class Menu:
             "coca cola": 0.99
         }
 
+    # define a function that displays_menu
+    def display_menu(self):
+        print("**MENU**")
+        for key, val in self.menu.items():
+            print(key + (" " * (20 - len(key))) + "- £" + str(val))
+
 if __name__ == "__main__":
     menu = Menu()
+    # testing printing menus functions
     print(menu.menu.items())
-    print(menu.menu.keys())
+    for item in menu.menu.keys():
+        print(item)
     print(menu.menu.values())
+
+    menu.display_menu()
