@@ -1,5 +1,6 @@
 # Restaurant Waiter Helper Programme
 
+- Open and run the main.py file
 - Enter 3 orders from the menu you want to order
 
 ### User stories for task
