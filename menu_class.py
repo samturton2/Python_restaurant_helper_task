@@ -18,7 +18,7 @@ class Menu:
 
     # define a function that displays_menu
     def display_menu(self):
-        print("**MENU**")
+        print("*"*11 + "MENU" + "*"*12)
         for key, val in self.menu.items():
             print(key + (" " * (20 - len(key))) + "- £" + str(val))
 
